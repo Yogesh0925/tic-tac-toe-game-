@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe Game</title>
+  <link rel="stylesheet" href="ticstyles.css">
+</head>
+<body>
+  <!-- Mode Selection Screen -->
+  <div id="mode-selection" class="container active">
+    <h2>Select Game Mode</h2>
+    <button onclick="chooseSymbol('friend')">Play with Friends</button>
+    <button onclick="chooseSymbol('ai')">Play with AI</button>
+  </div>
+
+  <!-- Symbol Selection Screen -->
+  <div id="symbol-selection" class="container">
+    <h2>Select Your Symbol</h2>
+    <button onclick="startGame('X')">Play as X</button>
+    <button onclick="startGame('O')">Play as O</button>
+  </div>
+
+  <!-- Game Container -->
+  <div id="game-container" class="container">
+    <div id="scoreboard">
+      <div>Player X: <span id="scoreX">0</span></div>
+      <div>Player O: <span id="scoreO">0</span></div>
+      <div>Draws: <span id="draws">0</span></div>
+    </div>
+    <div id="message">Player X's turn</div>
+    <div id="tic-tac-toe-board">
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+    <button onclick="resetGame()">Reset Game</button>
+  </div>
+
+  <script src="ticscript.js"></script>
+</body>
+</html>
